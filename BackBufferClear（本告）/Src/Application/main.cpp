@@ -137,7 +137,7 @@ void Application::Execute()
 		//=========================================
 
 		// ゲーム更新
-		Math::Color color(1.0f, 1.0f, 1.0f, 1.0f);
+		Math::Color color(1.0f, 0.0f, 1.0f, 1.0f);
 
 		// ゲーム描画
 		D3D.WorkDevContext()->ClearRenderTargetView(
