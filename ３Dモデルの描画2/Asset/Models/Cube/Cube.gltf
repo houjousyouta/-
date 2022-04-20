@@ -1,6 +1,6 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.1.45",
+        "generator" : "Khronos glTF Blender I/O v1.4.40",
         "version" : "2.0"
     },
     "scene" : 0,
@@ -17,7 +17,18 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "GreenCube"
+            "name" : "GreenCube",
+            "rotation" : [
+                0.9982441067695618,
+                0,
+                0,
+                -0.05923454090952873
+            ],
+            "translation" : [
+                0,
+                1.3093478679656982,
+                -0.0878990888595581
+            ]
         },
         {
             "mesh" : 1,
@@ -31,11 +42,6 @@
     "materials" : [
         {
             "doubleSided" : true,
-            "emissiveFactor" : [
-                0,
-                0,
-                0
-            ],
             "name" : "Material",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
@@ -50,11 +56,6 @@
         },
         {
             "doubleSided" : true,
-            "emissiveFactor" : [
-                0,
-                0,
-                0
-            ],
             "name" : "Material.001",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
@@ -69,11 +70,6 @@
         },
         {
             "doubleSided" : true,
-            "emissiveFactor" : [
-                0,
-                0,
-                0
-            ],
             "name" : "Material.002",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [

@@ -189,12 +189,35 @@ void Application::Execute()
 		//背景描画（空）
 		D3D.WorkShaderManager().m_HD2DShader.DrawModel(Sky_Model);
 
-		//キューブ描画
-		D3D.WorkShaderManager().m_HD2DShader.DrawMesh(
-			Cube_Model.GetMesh(0).get(),
-			Math::Matrix::Identity,
-			Cube_Model.GetMaterials(),
-			kWhiteColor);
+		//HD2DShaderの光を加味しない描画の終了
+		D3D.WorkShaderManager().m_HD2DShader.EndNoLighting();
+
+		//HD2DShaderの陰影を描画するための準備
+		D3D.WorkShaderManager().m_HD2DShader.BeginLighting();
+
+
+		//キューブ描画（モデルver）
+		D3D.WorkShaderManager().m_HD2DShader.DrawModel(Cube_Model);
+
+		////キューブ描画0番目(緑)
+		//D3D.WorkShaderManager().m_HD2DShader.DrawMesh(
+		//	Cube_Model.GetMesh(0).get(),
+		//	Math::Matrix::Identity,
+		//	Cube_Model.GetMaterials(),
+		//	kWhiteColor);
+
+		////キューブ描画１番目(赤)
+		//D3D.WorkShaderManager().m_HD2DShader.DrawMesh(
+		//	Cube_Model.GetMesh(1).get(),
+		//	Math::Matrix::Identity,
+		//	Cube_Model.GetMaterials(),
+		//	kWhiteColor);
+		////キューブ描画２番目(青)
+		//D3D.WorkShaderManager().m_HD2DShader.DrawMesh(
+		//	Cube_Model.GetMesh(2).get(),
+		//	Math::Matrix::Identity,
+		//	Cube_Model.GetMaterials(),
+		//	kWhiteColor);
 
 		//地面描画
 		D3D.WorkShaderManager().m_HD2DShader.DrawModel(Terrain_Model);

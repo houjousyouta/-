@@ -1,0 +1,15 @@
+A行列（５，０，０）
+B行列（０，０，５）
+
+A*B=（５，０，５）
+足し算になる
+
+陰影＝Shader
+
+projectionMatrix
+=射影行列
+
+directional Light
+=平行光
+
+光は重要
