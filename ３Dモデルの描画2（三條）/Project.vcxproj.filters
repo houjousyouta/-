@@ -55,6 +55,15 @@
     <Filter Include="Src\Framework\Input">
       <UniqueIdentifier>{9bd33b87-53db-4bc0-b98d-80db98f4ba9b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Game">
+      <UniqueIdentifier>{08bbbefa-28a1-424b-ace9-278ae1c41357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject">
+      <UniqueIdentifier>{69d0a9ec-8792-4325-99ca-91cb3b5ccad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\Environment">
+      <UniqueIdentifier>{e4389cef-abb2-4e76-afc9-ef0d91ec245e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -159,6 +168,9 @@
     <ClInclude Include="Src\Framework\Utility\KdCSVData.h">
       <Filter>Src\Framework\Utility</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\Environment\Terrain.h">
+      <Filter>Src\Application\Game\GameObject\Environment</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -244,6 +256,9 @@
     </ClCompile>
     <ClCompile Include="Src\Framework\Utility\KdCSVData.cpp">
       <Filter>Src\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\Environment\Terrain.cpp">
+      <Filter>Src\Application\Game\GameObject\Environment</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

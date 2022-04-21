@@ -159,17 +159,27 @@ void Application::Execute()
 		//=========================================
 
 		// ゲーム更新
-		Math::Color color(1.0f, 0.0f, 1.0f, 1.0f);
+		//赤色を＋していく                                     　赤↓
+		D3D.WorkShaderManager().m_cb8_Light.Work().DirLight_Color.x += 0.02f;
+		
+		//緑色を＋していく                                     　緑↓
+		D3D.WorkShaderManager().m_cb8_Light.Work().DirLight_Color.y += 0.02f;
+		
+		//青色を＋していく                                     　青↓
+		D3D.WorkShaderManager().m_cb8_Light.Work().DirLight_Color.z += 1.02f;
+
+		//m_cb8_Lightの情報が書き換わる
+		D3D.WorkShaderManager().m_cb8_Light.Write();
 
 		// ゲーム描画
+		Math::Color color(1.0f, 0.0f, 1.0f, 1.0f);
+
 		D3D.WorkDevContext()->ClearRenderTargetView(
 			D3D.WorkBackBuffer()->WorkRTView(), color);
 
 		D3D.WorkDevContext()->ClearDepthStencilView(
 			D3D.WorkZBuffer()->WorkDSView(),
 			D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
-
-
 
 		//このカメラは置いとかないとダメ
 		camera.SetToShader();
